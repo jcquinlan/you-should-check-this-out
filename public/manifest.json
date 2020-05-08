@@ -1,6 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "you should check this out",
+  "name": "you should check this out",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "user submitted links to material that should be read after the material of the current url.",
   "icons": [
     {
       "src": "favicon.ico",
