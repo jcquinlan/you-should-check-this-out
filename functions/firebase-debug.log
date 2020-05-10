@@ -1,0 +1,111 @@
+[debug] [2020-05-10T05:42:48.228Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T05:42:48.230Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-10T05:42:48.230Z] CLI Version:   8.0.2
+[debug] [2020-05-10T05:42:48.230Z] Platform:      darwin
+[debug] [2020-05-10T05:42:48.230Z] Node Version:  v12.16.1
+[debug] [2020-05-10T05:42:48.231Z] Time:          Sat May 09 2020 23:42:48 GMT-0600 (Mountain Daylight Time)
+[debug] [2020-05-10T05:42:48.231Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T05:42:48.231Z] 
+[debug] [2020-05-10T05:42:48.237Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-10T05:42:48.237Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions
+[debug] [2020-05-10T05:42:48.255Z] [hub] writing locator at /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/hub-you-should-check-this-out.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "/Users/jamesquinlan/Repos/you-should-check-out/functions" for Cloud Functions...
+[debug] [2020-05-10T05:42:48.278Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-10T05:42:48.279Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-10T05:42:48.279Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-10T05:42:48.279Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53433.sock 
+[debug] [2020-05-10T05:42:48.280Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: BUSY 
+[debug] [2020-05-10T05:42:48.510Z] [runtime-status] [53433] Functions runtime initialized. {"cwd":"/Users/jamesquinlan/Repos/you-should-check-out/functions","node_version":"12.16.1"} 
+[debug] [2020-05-10T05:42:48.511Z] [runtime-status] [53433] Disabled runtime features: undefined 
+[debug] [2020-05-10T05:42:48.513Z] [runtime-status] [53433] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:42:48.513Z] [runtime-status] [53433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:48.517Z] [runtime-status] [53433] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-10T05:42:48.541Z] [runtime-status] [53433] Checked functions.config() {"config":{}} 
+[debug] [2020-05-10T05:42:48.542Z] [runtime-status] [53433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:48.543Z] [runtime-status] [53433] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:42:48.543Z] [runtime-status] [53433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:48.543Z] [runtime-status] [53433] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"}} 
+[info] ✔  functions[metadata]: http function initialized (http://localhost:5001/you-should-check-this-out/us-central1/metadata).
+[info] ✔  emulators: All emulators started, it is now safe to connect.
+[debug] [2020-05-10T05:42:48.603Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: IDLE 
+[debug] [2020-05-10T05:42:52.071Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-10T05:42:52.071Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-10T05:42:52.071Z] Accepted request OPTIONS /you-should-check-this-out/us-central1/metadata --> metadata
+[debug] [2020-05-10T05:42:52.076Z] [worker-pool] addWorker(metadata) 
+[debug] [2020-05-10T05:42:52.076Z] [worker-pool] Adding worker with key metadata, total=1 
+[debug] [2020-05-10T05:42:52.076Z] [worker-pool] submitWork(triggerId=metadata) 
+[debug] [2020-05-10T05:42:52.076Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53436.sock 
+[debug] [2020-05-10T05:42:52.076Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: BUSY 
+[debug] [2020-05-10T05:42:52.303Z] [runtime-status] [53436] Functions runtime initialized. {"cwd":"/Users/jamesquinlan/Repos/you-should-check-out/functions","node_version":"12.16.1"} 
+[debug] [2020-05-10T05:42:52.304Z] [runtime-status] [53436] Disabled runtime features: undefined 
+[debug] [2020-05-10T05:42:52.306Z] [runtime-status] [53436] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:42:52.307Z] [runtime-status] [53436] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:52.310Z] [runtime-status] [53436] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-10T05:42:52.335Z] [runtime-status] [53436] Checked functions.config() {"config":{}} 
+[debug] [2020-05-10T05:42:52.335Z] [runtime-status] [53436] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:52.336Z] [runtime-status] [53436] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:42:52.336Z] [runtime-status] [53436] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:42:52.337Z] [runtime-status] [53436] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-10T05:42:52.397Z] [runtime-status] [53436] Trigger "metadata" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "metadata"
+[debug] [2020-05-10T05:42:52.398Z] [runtime-status] [53436] triggerDefinition {"httpsTrigger":{},"name":"metadata","entryPoint":"metadata"} 
+[debug] [2020-05-10T05:42:52.398Z] [runtime-status] [53436] Running metadata in mode HTTPS 
+[debug] [2020-05-10T05:42:52.401Z] [runtime-status] [53436] Attempting to listen to socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53436.sock 
+[debug] [2020-05-10T05:42:52.404Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-10T05:42:52.410Z] [runtime-status] [53436] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-10T05:42:52.413Z] [runtime-status] [53436] Ephemeral server survived. 
+[info] i  functions: Finished "metadata" in ~1s
+[debug] [2020-05-10T05:42:52.419Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: IDLE 
+[debug] [2020-05-10T05:42:52.419Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-10T05:42:52.422Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-10T05:42:52.422Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-10T05:42:52.422Z] Accepted request POST /you-should-check-this-out/us-central1/metadata --> metadata
+[debug] [2020-05-10T05:42:52.422Z] [worker-pool] submitWork(triggerId=metadata) 
+[debug] [2020-05-10T05:42:52.422Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53436.sock 
+[debug] [2020-05-10T05:42:52.422Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: BUSY 
+[debug] [2020-05-10T05:42:52.430Z] [runtime-status] [53436] Trigger "metadata" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "metadata"
+[debug] [2020-05-10T05:42:52.430Z] [runtime-status] [53436] triggerDefinition {"httpsTrigger":{},"name":"metadata","entryPoint":"metadata"} 
+[debug] [2020-05-10T05:42:52.430Z] [runtime-status] [53436] Running metadata in mode HTTPS 
+[debug] [2020-05-10T05:42:52.431Z] [runtime-status] [53436] Attempting to listen to socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53436.sock 
+[debug] [2020-05-10T05:42:52.431Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-10T05:42:52.441Z] [runtime-status] [53436] Ephemeral server handling POST request 
+[warn] ⚠  External network resource requested!
+   - URL: "http://google.com/"
+ - Be careful, this may be a production service.
+[debug] [2020-05-10T05:42:52.449Z] [runtime-status] [53436] Ephemeral server survived. 
+[warn] ⚠  External network resource requested!
+   - URL: "http://www.google.com/"
+ - Be careful, this may be a production service.
+[info] i  functions: Finished "metadata" in ~1s
+[debug] [2020-05-10T05:42:52.677Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: IDLE 
+[debug] [2020-05-10T05:42:52.677Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-10T05:43:43.854Z] File /Users/jamesquinlan/Repos/you-should-check-out/functions/index.js changed, reloading triggers 
+[debug] [2020-05-10T05:43:44.855Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-10T05:43:44.856Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: FINISHING 
+[debug] [2020-05-10T05:43:44.856Z] [worker-pool] Shutting down IDLE worker (metadata) 
+[debug] [2020-05-10T05:43:44.856Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: FINISHING 
+[debug] [2020-05-10T05:43:44.860Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-10T05:43:44.860Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-10T05:43:44.861Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-10T05:43:44.861Z] [worker-~diagnostic~-1c971200-bd92-457b-a380-ae02cc257331]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_53488.sock 
+[debug] [2020-05-10T05:43:44.861Z] [worker-~diagnostic~-1c971200-bd92-457b-a380-ae02cc257331]: BUSY 
+[debug] [2020-05-10T05:43:44.863Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: exited 
+[debug] [2020-05-10T05:43:44.863Z] [worker-~diagnostic~-ca989857-c7ff-48c3-b6f1-f50148a34d70]: FINISHED 
+[debug] [2020-05-10T05:43:44.864Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: exited 
+[debug] [2020-05-10T05:43:44.864Z] [worker-metadata-a06c03b9-51dd-403b-a9c1-caaa70f2d9ec]: FINISHED 
+[debug] [2020-05-10T05:43:45.085Z] [runtime-status] [53488] Functions runtime initialized. {"cwd":"/Users/jamesquinlan/Repos/you-should-check-out/functions","node_version":"12.16.1"} 
+[debug] [2020-05-10T05:43:45.086Z] [runtime-status] [53488] Disabled runtime features: undefined 
+[debug] [2020-05-10T05:43:45.087Z] [runtime-status] [53488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:43:45.088Z] [runtime-status] [53488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:43:45.092Z] [runtime-status] [53488] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-10T05:43:45.116Z] [runtime-status] [53488] Checked functions.config() {"config":{}} 
+[debug] [2020-05-10T05:43:45.116Z] [runtime-status] [53488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:43:45.117Z] [runtime-status] [53488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-10T05:43:45.118Z] [runtime-status] [53488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-10T05:43:45.118Z] [runtime-status] [53488] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/jamesquinlan/Repos/you-should-check-out/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-10T05:43:45.179Z] [worker-~diagnostic~-1c971200-bd92-457b-a380-ae02cc257331]: IDLE 
