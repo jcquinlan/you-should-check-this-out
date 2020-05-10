@@ -2,30 +2,13 @@ import React, {useState, useRef, useEffect} from 'react';
 import {debounce} from 'lodash';
 import {isValidUrl, fetchMetaData} from '../services/urlService';
 import {createRecommendation} from '../services/recommendationService';
-import styled from 'styled-components';
-import {Title, AppWrapperBody} from '../App';
+import {Title, AppWrapperBody, Input, FixedHeightBox, Error} from './styled';
 import {FooterButton} from './FooterButton';
+import MetadataCard from './MetadataCard';
 
-const Input = styled.input`
-    padding: 10px;
-    background-color: #eee;
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
-`;
-
-const FixedHeightBox = styled.div`
-  height: 24px;
-  width: 100%;
-  display: flex;
-`;
-
-const Error = styled.p`
-  color: red;
-  margin: 10px 0 0 0;
-`;
   
 const funPlaceholders = [
+    'https://www.mycoolsite.net',
     'http://www.goodtime.blog/posts/3352/',
     'https://www.some-arxiv-paper.xyz/232q3kuy4f7wfgsi',
     'http://www.reddit.com/r/youmightlikethis',
@@ -35,18 +18,27 @@ const funPlaceholders = [
     'https://www.podcasts4you.com/funny',
     'http://www.cs.fancy-science-article.edu/blog',
     'http://www.youtube.com/watch/214nd1naigsvsc8/related-video'
-]
-  
+];
+
 export default () => {
     const [link, setLink] = useState('');
+    const [metadata, setMetadata] = useState({});
     const [isUrlValidBool, setIsUrlValidBool] = useState(true);
     const [buttonActive, setButtonActive] = useState(false);
-    const [placeholder, setPlaceholder] = useState('https://www.mycoolsite.net');
+    const [placeholder, setPlaceholder] = useState(funPlaceholders[0]);
+
     const errorCheck = useRef(debounce((link) => {
-      const isValid = !link || isValidUrl(link);
-      setIsUrlValidBool(isValid);
+      const isValid = isValidUrl(link);
+      setIsUrlValidBool(!link || isValid);
       setButtonActive(isValidUrl(link));
-    }, 500));
+      if (isValid) {
+        fetchMetaData(link)
+          .then(data => {
+            const {description, title} = data;
+            setMetadata({description, title, link});
+          });
+      }
+    }, 700));
   
     useEffect(() => {
       const timer = setInterval(() => {
@@ -60,10 +52,8 @@ export default () => {
     }, []);
   
     const handleInput = (e) => {
-        if (buttonActive) {
-          setButtonActive(false);
-        }
-  
+        setButtonActive(false);
+        setMetadata({});
         setLink(e.target.value);
   
         if (!e.target.value) {
@@ -74,8 +64,8 @@ export default () => {
     };
   
     const submitRecommendation = () => {
-        createRecommendation(link);
-        fetchMetaData(link);
+        createRecommendation(metadata)
+          .then(() => console.log('done!'));
     }
   
     return (
@@ -84,6 +74,7 @@ export default () => {
           <Title>link to the material you suggest</Title>
           <Input placeholder={placeholder} value={link} onChange={handleInput} />
           <FixedHeightBox>{!isUrlValidBool && <Error>you gotta use a valid url</Error>}</FixedHeightBox>
+          {!!Object.keys(metadata).length && <MetadataCard metadata={metadata} />}
         </AppWrapperBody>
   
         <FooterButton disabled={!buttonActive} onClick={submitRecommendation} text="submit recommendation" />

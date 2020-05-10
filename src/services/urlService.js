@@ -22,10 +22,10 @@ export const fetchMetaData = (link) => {
         },
     };
 
-    fetch(METADATA_URL, options)
+    return fetch(METADATA_URL, options)
         .then(res => res.json())
-        .then(res => {
-            console.log(res);
+        .then(data => {
+            return data;
         })
         .catch(err => {
             console.log(err);

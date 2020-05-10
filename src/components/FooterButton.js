@@ -12,6 +12,7 @@ const FooterButtonButton = styled.button`
     box-shadow: none;
     border: none;
     font-size: 18px;
+    font-weight: 100;
     cursor: pointer;
 
     &:disabled {

@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import {v4 as uuid} from 'uuid';
 
 let dbInstance;
 
@@ -9,12 +10,16 @@ const db = () => {
 
     dbInstance = firebase.firestore();
     return dbInstance;
-}
-
-export const getRecommendations = () => {
-    return db().collection('recommendations').get();
 };
 
-export const createRecommendation = (link) => {
+const getCurrentUrl = () => window.location.href;
 
+export async function getRecommendations () {
+    return await db().collection('recommendations').where('for', '==', getCurrentUrl()).get();
+};
+
+export async function createRecommendation (metadata) {
+    const id = uuid();
+    const currentUrl = getCurrentUrl();
+    return await db().collection('recommendations').doc(id).set({for: currentUrl, ...metadata, votes: 0});
 }
