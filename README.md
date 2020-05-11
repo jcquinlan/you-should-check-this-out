@@ -2,6 +2,9 @@
 </br>
 <code>a project by james quinlan</code>
 
+![Image of ysco](https://raw.githubusercontent.com/jcquinlan/you-should-check-this-out/master/screenshot1.jpg)
+![Image of ysco](https://raw.githubusercontent.com/jcquinlan/you-should-check-this-out/master/screenshot2.jpg)
+
 i'd thought it'd be neat to have a little extension that allows visitors to a site
 to recommend other, related material. like a shittier, totally manual
 search engine. sometimes recommendations sourced directly from folks can be a lot better
