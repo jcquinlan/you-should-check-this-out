@@ -1,6 +1,6 @@
 {
   "name": "you should check out",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "description": "recommended links relating to whatever site the user is on, suggested by other users",
   "browser_action": {
