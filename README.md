@@ -1,5 +1,9 @@
-hey, i'd thought it'd be neat to have a little extension that allows visitors to a site
-to recommend other material related to the current site. like a shittier, totally manual
+**you should check out**
+</br>
+<code>a project by james quinlan</code>
+
+i'd thought it'd be neat to have a little extension that allows visitors to a site
+to recommend other, related material. like a shittier, totally manual
 search engine. sometimes recommendations sourced directly from folks can be a lot better
 than what google can dig up.
 
