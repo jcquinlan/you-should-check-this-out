@@ -14,9 +14,13 @@ const FooterButtonButton = styled.button`
     font-size: 18px;
     font-weight: 100;
     cursor: pointer;
+    background-color: blue;
+    color: #fff;
 
     &:disabled {
         color: #eee;
+        background-color: #fff;
+        cursor: not-allowed;
     }
 `;
 

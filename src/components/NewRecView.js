@@ -2,7 +2,8 @@ import React, {useState, useRef, useEffect} from 'react';
 import {debounce} from 'lodash';
 import {isValidUrl, fetchMetaData} from '../services/urlService';
 import {createRecommendation} from '../services/recommendationService';
-import {Title, AppWrapperBody, Input, FixedHeightBox, Error} from './styled';
+import {Title, AppWrapperBody, Input, FixedHeightBox, Error, Flex} from './styled';
+import PulseLoader from 'react-spinners/PulseLoader';
 import {FooterButton} from './FooterButton';
 import MetadataCard from './MetadataCard';
 
@@ -23,20 +24,33 @@ const funPlaceholders = [
 export default () => {
     const [link, setLink] = useState('');
     const [metadata, setMetadata] = useState({});
+    const [loadingMetadata, setLoadingMetadata] = useState(false);
     const [isUrlValidBool, setIsUrlValidBool] = useState(true);
     const [buttonActive, setButtonActive] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
     const [placeholder, setPlaceholder] = useState(funPlaceholders[0]);
 
     const errorCheck = useRef(debounce((link) => {
       const isValid = isValidUrl(link);
       setIsUrlValidBool(!link || isValid);
-      setButtonActive(isValidUrl(link));
+
       if (isValid) {
+        setLoadingMetadata(true);
         fetchMetaData(link)
           .then(data => {
-            const {description, title} = data;
-            setMetadata({description, title, link});
+            const description = (data && data.description) || '';
+            const title = (data && data.title) || '';
+
+            setMetadata({description, title, link, votes: 0});
+          })
+          .finally(() => {
+            setTimeout(() => {
+              setLoadingMetadata(false)
+              setButtonActive(true);
+            }, 300);
           });
+      } else {
+        setButtonActive(false);
       }
     }, 700));
   
@@ -65,7 +79,16 @@ export default () => {
   
     const submitRecommendation = () => {
         createRecommendation(metadata)
-          .then(() => console.log('done!'));
+          .then(() => setSubmitted(true));
+    }
+
+    if (submitted) {
+      return (
+        <AppWrapperBody>
+          <Title>thank you!</Title>
+          <p>we added that link to the suggested reading material for this site.</p>
+        </AppWrapperBody>
+      )
     }
   
     return (
@@ -74,7 +97,8 @@ export default () => {
           <Title>link to the material you suggest</Title>
           <Input placeholder={placeholder} value={link} onChange={handleInput} />
           <FixedHeightBox>{!isUrlValidBool && <Error>you gotta use a valid url</Error>}</FixedHeightBox>
-          {!!Object.keys(metadata).length && <MetadataCard metadata={metadata} />}
+          {loadingMetadata && <Flex justifyContent="center"><PulseLoader size={8} margin={5} color="#333" /></Flex>}
+          {!loadingMetadata && !!Object.keys(metadata).length && <MetadataCard metadata={metadata} />}
         </AppWrapperBody>
   
         <FooterButton disabled={!buttonActive} onClick={submitRecommendation} text="submit recommendation" />

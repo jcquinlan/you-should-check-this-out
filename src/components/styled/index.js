@@ -7,6 +7,7 @@ export const AppWrapper = styled.div`
 
 export const AppWrapperBody = styled.div`
   padding: 20px;
+  padding-top: 40px;
 `;
 
 export const Header = styled.div`
@@ -24,15 +25,15 @@ export const BackArrowButton = styled.div`
 export const Title = styled.h4`
   margin: 0;
   margin-bottom: 15px;
-  font-weight: 300;
+  font-weight: 600;
 `;
 
 export const Input = styled.input`
-    padding: 10px;
-    background-color: #eee;
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 export const FixedHeightBox = styled.div`
@@ -44,4 +45,11 @@ export const FixedHeightBox = styled.div`
 export const Error = styled.p`
   color: red;
   margin: 10px 0 0 0;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  ${props => props.alignItems ? `align-items: ${props.alignItems};` : ''}
+  ${props => props.justifyContent ? `justify-content: ${props.justifyContent};` : ''}
+  ${props => props.flexDirection ? `flex-direction: ${props.flexDirection};` : ''}
 `;

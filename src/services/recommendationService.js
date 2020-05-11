@@ -12,14 +12,26 @@ const db = () => {
     return dbInstance;
 };
 
-const getCurrentUrl = () => window.location.href;
+export async function getCurrentUrl () {
+    return new Promise((resolve, reject) => {
+        // eslint-disable-next-line no-undef
+        chrome.tabs.getSelected(null, (tab) => {
+            resolve(tab.url);
+        });
+    });
+};
 
 export async function getRecommendations () {
-    return await db().collection('recommendations').where('for', '==', getCurrentUrl()).get();
+    const currentUrl = await getCurrentUrl();
+    return await db().collection('recommendations').where('for', '==', currentUrl).get();
 };
 
 export async function createRecommendation (metadata) {
     const id = uuid();
-    const currentUrl = getCurrentUrl();
+    const currentUrl = await getCurrentUrl();
     return await db().collection('recommendations').doc(id).set({for: currentUrl, ...metadata, votes: 0});
+}
+
+export async function voteOnRecommendation (id, newVote) {
+    return await db().collection('recommendations').doc(id).update({votes: newVote});
 }
