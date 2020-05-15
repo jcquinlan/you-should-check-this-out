@@ -13,12 +13,19 @@ const db = () => {
 };
 
 export async function getCurrentUrl () {
-    return new Promise((resolve, reject) => {
-        // eslint-disable-next-line no-undef
-        chrome.tabs.getSelected(null, (tab) => {
-            resolve(tab.url);
+    if (window.chrome && window.chrome.tabs) {
+        return new Promise((resolve, reject) => {
+            // eslint-disable-next-line no-undef
+            chrome.tabs.getSelected(null, (tab) => {
+                resolve(tab.url);
+            });
         });
-    });
+    } else {
+        return new Promise((resolve, reject) => {
+            resolve(window.location.href);
+        });
+    }
+
 };
 
 export async function getRecommendations () {

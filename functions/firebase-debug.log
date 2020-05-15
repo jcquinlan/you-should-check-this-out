@@ -2370,3 +2370,43 @@
 [info] i  functions: Finished "metadata" in ~1s
 [debug] [2020-05-11T04:23:07.573Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: IDLE 
 [debug] [2020-05-11T04:23:07.573Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T04:49:55.171Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T04:49:55.174Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T04:49:55.174Z] Accepted request OPTIONS /you-should-check-this-out/us-central1/metadata --> metadata
+[debug] [2020-05-15T04:49:55.175Z] [worker-pool] submitWork(triggerId=metadata) 
+[debug] [2020-05-15T04:49:55.177Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_74930.sock 
+[debug] [2020-05-15T04:49:55.177Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: BUSY 
+[debug] [2020-05-15T04:49:55.219Z] [runtime-status] [74930] Trigger "metadata" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "metadata"
+[debug] [2020-05-15T04:49:55.226Z] [runtime-status] [74930] triggerDefinition {"httpsTrigger":{},"name":"metadata","entryPoint":"metadata"} 
+[debug] [2020-05-15T04:49:55.226Z] [runtime-status] [74930] Running metadata in mode HTTPS 
+[debug] [2020-05-15T04:49:55.226Z] [runtime-status] [74930] Attempting to listen to socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_74930.sock 
+[debug] [2020-05-15T04:49:55.228Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T04:49:55.233Z] [runtime-status] [74930] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T04:49:55.237Z] [runtime-status] [74930] Ephemeral server survived. 
+[info] i  functions: Finished "metadata" in ~1s
+[debug] [2020-05-15T04:49:55.241Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: IDLE 
+[debug] [2020-05-15T04:49:55.246Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T04:49:55.247Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T04:49:55.247Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T04:49:55.247Z] Accepted request POST /you-should-check-this-out/us-central1/metadata --> metadata
+[debug] [2020-05-15T04:49:55.247Z] [worker-pool] submitWork(triggerId=metadata) 
+[debug] [2020-05-15T04:49:55.247Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: Assigning socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_74930.sock 
+[debug] [2020-05-15T04:49:55.247Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: BUSY 
+[debug] [2020-05-15T04:49:55.253Z] [runtime-status] [74930] Trigger "metadata" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "metadata"
+[debug] [2020-05-15T04:49:55.254Z] [runtime-status] [74930] triggerDefinition {"httpsTrigger":{},"name":"metadata","entryPoint":"metadata"} 
+[debug] [2020-05-15T04:49:55.254Z] [runtime-status] [74930] Running metadata in mode HTTPS 
+[debug] [2020-05-15T04:49:55.254Z] [runtime-status] [74930] Attempting to listen to socketPath: /var/folders/ry/p4gt351x7wq6_2h8n8zb9vgc0000gp/T/fire_emu_74930.sock 
+[debug] [2020-05-15T04:49:55.254Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T04:49:55.262Z] [runtime-status] [74930] Ephemeral server handling POST request 
+[warn] ⚠  External network resource requested!
+   - URL: "http://google.com/"
+ - Be careful, this may be a production service.
+[debug] [2020-05-15T04:49:55.263Z] [runtime-status] [74930] Ephemeral server survived. 
+[warn] ⚠  External network resource requested!
+   - URL: "http://www.google.com/"
+ - Be careful, this may be a production service.
+[info] i  functions: Finished "metadata" in ~1s
+[debug] [2020-05-15T04:49:55.564Z] [worker-metadata-b1882d1a-aa2e-4c52-bf03-d2ec7e77c95e]: IDLE 
+[debug] [2020-05-15T04:49:55.564Z] [work-queue] {"queueLength":0,"workRunningCount":0}

@@ -1,6 +1,9 @@
+import Env from '../env';
+
 const parser = new DOMParser();
-// const METADATA_URL = 'https://us-central1-you-should-check-this-out.cloudfunctions.net/metadata';
-const METADATA_URL = 'http://localhost:5001/you-should-check-this-out/us-central1/metadata';
+const METADATA_URL = Env.isLocal ?
+    'http://localhost:5001/you-should-check-this-out/us-central1/metadata' :
+    'https://us-central1-you-should-check-this-out.cloudfunctions.net/metadata';
 
 export function isValidUrl (url) {
     const regexString = '^(ftp|http|https)://[^ "]+$';

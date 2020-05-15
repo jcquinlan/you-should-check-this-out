@@ -40,7 +40,7 @@ export const RecommendationListWrapper = () => {
             });
 
         getCurrentUrlVoteRecord()
-            .then(record => console.log(record) || setVoteRecord(record));
+            .then(record => setVoteRecord(record));
     }, []);
 
     const handleUpdatedMetadata = (metadata) => {

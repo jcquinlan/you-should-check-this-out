@@ -104,7 +104,7 @@ export default ({metadata, onUpdate, currentVote}) => {
         const newValue = votes + magnitude;
         voteOnRecommendation(id, newValue)
             .then(res => onUpdate({...metadata, votes: newValue}));
-        updateVoteRecord(id, magnitude, (record) => console.log(record));
+        updateVoteRecord(id, magnitude);
     }
 
     return (
