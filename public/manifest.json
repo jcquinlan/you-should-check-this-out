@@ -9,8 +9,7 @@
   },
   "permissions": [
     "storage",
-    "tabs",
-    "<all_urls>"
+    "tabs"
   ],
   "icons": {
     "16": "favicon-16x16.png",
