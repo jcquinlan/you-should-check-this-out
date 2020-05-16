@@ -1,7 +1,7 @@
 {
   "name": "you should check out",
-  "version": "0.2",
-  "manifest_version": 2,
+  "version": "0.3",
+  "manifest_version": 3,
   "description": "recommended links relating to whatever site the user is on, suggested by other users",
   "browser_action": {
     "default_popup": "index.html",
@@ -11,5 +11,10 @@
     "storage",
     "tabs",
     "<all_urls>"
-  ]
+  ],
+  "icons": {
+    "16": "favicon-16x16.png",
+    "48": "favicon-48x48.png",
+    "128": "favicon-128x128.png"
+  }
 }
