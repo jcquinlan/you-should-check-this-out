@@ -17,7 +17,7 @@
         "http://*/*",
         "https://*/*"
       ],
-      "js": ["/js/test.js"]
+      "js": ["background.js"]
     }
   ],
   "icons": {
