@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {RecommendationListWrapper} from './components/RecommendationListWrapper';
 import {FooterButton} from './components/FooterButton';
@@ -38,6 +38,10 @@ function App() {
   };
 
   const onBackClick = () => setShowNewRec(false);
+
+  useEffect(() => {
+    window.chrome.browserAction.setBadgeText({text: 'test'});
+  }, []);
 
   return (
     <AppWrapper>

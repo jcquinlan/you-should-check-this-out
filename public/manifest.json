@@ -11,6 +11,15 @@
     "storage",
     "tabs"
   ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["/js/test.js"]
+    }
+  ],
   "icons": {
     "16": "favicon-16x16.png",
     "48": "favicon-48x48.png",
